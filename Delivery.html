@@ -1,0 +1,412 @@
+<html>
+<head><title>Delivery</title>
+	<!-- add a statemnt, deliver with us !-->
+
+<link rel="stylesheet" type="text/css" href="deliver2.css"/>
+	<style type="text/css"> 	
+	</style>
+					
+<script src="text.js">
+	</script>
+	
+	<script>
+		function Order(First_Name, Last_Name, Age,Email,Phone_Number,Street_Address,
+			City,State,Zipcode, Vehicle_Quality, Vehicle_Make,Vehicle_Model,Vehicle_Color
+			,Vehicle_Type, Card_Name, Card_Number, Expiration_Month, Expiration_Year, CVC)
+		{
+		   this.Card_Name = Card_Name;
+		   this.Card_Number = Card_Number;
+		   this.Expiration_Month = Expiration_Month;
+		   this.Expiration_Year = Expiration_Year;
+		   this.CVC = CVC;
+		   this.First_Name = First_Name;
+		   this.Last_Name = Last_Name;
+		   this.Age = Age;
+		   this.Email = Email;
+		   this.Phone_Number = Phone_Number;
+		   this.Street_Address = Street_Address;
+		   this.City = City;
+		   this.State = State;
+		   this.Zipcode = Zipcode;
+		   this.Vehicle_Quality = Vehicle_Quality;
+		   this.Vehicle_Make = Vehicle_Make;
+		   this.Vehicle_Model = Vehicle_Model;
+		   this.Vehicle_Color = Vehicle_Color;
+		   this.Vehicle_Type = Vehicle_Type;
+		}
+	
+		function VForm(First_Name, Last_Name, Age,Email,Phone_Number,Street_Address,
+			City,State,Zipcode, Vehicle_Quality, Vehicle_Make,Vehicle_Model,Vehicle_Color
+			,Vehicle_Type, Card_Name, Card_Number, Expiration_Month, Expiration_Year, CVC)
+		{
+			var Fname = /^[A-Za-z\s]+$/;
+			if (First_Name.value.match(Fname))
+			{
+				alert('Valid First Name');
+			}
+			else
+				{alert('Please Enter A Valid Name with Alphabetic letters ONLY!');
+					return false;
+			}	
+			
+			
+			var Lname = /^[A-Za-z\s]+$/;
+			if (Last_Name.value.match(Lname))
+			{
+				alert('Valid Last Name');
+			}
+			else
+				{alert('Last name should ONLY Alphabetic letters!');
+					return false;
+			}
+			
+			var age = /^([2-90]{2})$/;
+			if (Age.value.match(age))
+			{
+				alert('Your can proceed');
+			}
+			else
+				{alert('If you are not 20 you cannot purchase a car OR enter the last two digits of your birth year!');
+					return false;
+			}
+			
+			var email = /^[0-9-A-Za-z\@\.]+$/;
+			
+			if (Email.value.match(email))
+			
+			{
+				
+				alert('Valid Email');
+				
+			}
+			else 
+				
+				{alert('Please enter your email address');
+			return false;
+			}	
+			
+			
+			
+			var Phone = /^([0-9]{10})$/;
+			if (Phone_Number.value.match(Phone))
+			{
+				
+				alert(' Phone number approved!');
+			}
+			else
+				{alert('Please enter 10 digits phone number ONLY (no space or special characters)!');
+					return false;
+			}
+
+			var sa =  /^[0-9-A-Za-z\@\.\s]+$/;
+			if (Street_Address.value.match(sa))
+			{
+				alert(' Street Address Approved');
+				
+			}
+			else
+			{
+					alert('Please enter your home street address!');
+					return false;
+			}
+
+			var city = /^[A-Za-z\s]+$/;
+			if (City.value.match(city))
+			{
+				alert('City Approved');
+			}
+			else
+				{alert('City should be with Alphabetic letters ONLY!');
+					return false;
+			}	
+			
+			var zipcode = /^[0-9-A-Za-z\@\.\s]+$/;
+			if (Zipcode.value.match(zipcode))
+			{
+			alert('Zipcode Approved');
+			}
+			else
+			{alert('Please enter your zipcode');
+				return false;
+			}
+			
+			var Vmake = /^[0-9-A-Za-z\s]+$/;
+			if (Vehicle_Make.value.match(Vmake))
+			{
+				alert('Valid Vehicle Make');
+			}
+			else
+				{alert('Please enter the vehicle make!');
+					return false;
+			}	
+			
+			var Vmodel = /^[0-9-A-Za-z\@\.\s]+$/;
+			if (Vehicle_Model.value.match(Vmodel))
+			{
+				alert('Valid Vehicle Model');
+			}
+			else
+				{alert('Please enter the vehicle model');
+					return false;
+			}	
+			
+			var Vcolor = /^[A-Za-z\s]+$/;
+			if (Vehicle_Color.value.match(Vcolor))
+			{
+				alert('Valid Vehicle color');
+			}
+			else
+				{alert('Please enter the vehicle color!');
+					return false;
+			}
+			
+			var cardNme = /^[A-Za-z\s]+$/;
+			if (Card_Name.value.match(cardNme))
+			{
+				alert('Valid Card Name');
+			}
+			else
+			{
+			alert('Please enter card name with ALPHABETIC letters!');
+				return false;
+			}	
+		
+			var cardnum = /^([0-9]{16})$/;
+			if(Card_Number.value.match(cardnum))
+			{
+			 alert('Valid Card Number!')
+			}
+			else
+			{
+					alert('Not a valid card number! 16 numerics required');
+					return false;
+			}
+				
+			var exmonth = /^([0-9]{2})$/;
+			if(Expiration_Month.value.match(exmonth))
+			{
+			alert('Valid Expiration Month');
+		    }
+			else
+			{
+			alert('Not a valid expiration month! 2 numerics required');
+					return false;
+			}
+		
+					
+			var exyear = /^([0-9]{4})$/
+			if (Expiration_Year.value.match(exyear))
+			{
+			alert('Valid Expiration Year');
+		    }
+			else
+			{
+			alert('Not a valid expiration year! 4 numerics required');
+				return false;
+			}
+						
+			var cvc = /^([0-9]{3})$/
+			if (CVC.value.match(cvc))
+			{
+			alert('Valid CVC Number');
+			}
+			else
+			{
+			alert("Not a valid CVC Number! 3 numerics required");  
+			    return false;
+			}
+			
+	
+		}
+	
+	</script>
+	
+
+
+</head>
+<body>
+	
+	<!-- add a pages that say your car is ready for pick up>
+	</!-->
+<div class="background-wrap">
+	<video id="video-bg-element" preload="auto" autoplay="true" loop="loop" muted="muted">
+		<source src="deliver.mov">
+</video></div>
+
+<div id="topdiv" style="background-color:darkgrey">
+	
+	<h2 style="margin-left:0px; margin-top:0px; float:left;">Getcar
+		<img style="float:left;margin-left:00px" height="80" width="120" src="logo.png" />
+	</div>
+	<center><mark style="background-color: darkgrey;">
+		<a style="color:black" href="hp1.html" data-id="1">   Home Page </a> &nbsp  &nbsp 
+		<a style="color:black" href="NewCars.html" data-id="2"> New Cars </a> &nbsp  &nbsp  
+		<a style="color:black" href="UsedCars.html" data-id="3">   Used Cars   </a> &nbsp  &nbsp  
+		<a style="color:black" href="Hybrid&Electric.html" data-id="4"> Hybrid/Electric</a>  &nbsp  &nbsp 
+		<a style="color:black" >Delivery</a> &nbsp  &nbsp 
+		<a style="color:black" href="aboutus.html" data-id="6"> About Us</a> &nbsp &nbsp
+		<a style="color:black" href="listCar.html" data-id="9">List/Sell My Car</a> 
+	</mark></center></div>
+	
+
+<div class="content">
+	<h1>Buy your next car online.</h1>	
+	<h2>Here's how is works</h2>
+</div>
+
+<table style="margin-top:200px; margin:auto">
+	<tr><ol>
+		<th><li>Find the Right Car</th></li>
+		<th><li>Purchase the Car Here</li></th>
+		<th><li>Get it Delivered</li></th></ol></tr>
+		
+		<tr><td><img src="https://previews.123rf.com/images/tatianasun/tatianasun1705/tatianasun170500026/77826883-looking-for-car-selling-icon-magnifying-glass-search-car-vector-logo-illustration-.jpg" width="250" height="170"></td>
+	<td><img src="https://media.istockphoto.com/vectors/online-electronic-smart-contract-document-on-laptop-vector-cartoon-vector-id912944360"width="250" height="170"></td>
+	<td><img src="https://thumbs.dreamstime.com/b/vector-cartoon-delivery-van-deliveryman-illustration-yellow-truck-against-background-city-courier-sitting-car-cargo-127287588.jpg" width="250" height="170"></td>
+		
+</table>
+	
+	
+<form name = "myForm" action = "http://www.WebsiteDevelopmentBook.com/FormEcho.php"
+ method = "post" onsubmit = "return VForm(First_Name, Last_Name, Age,Email,Phone_Number,Street_Address,City,State,Zipcode, Vehicle_Quality, Vehicle_Make,Vehicle_Model,Vehicle_Color,Vehicle_Type, Card_Name, Card_Number, Expiration_Month, Expiration_Year, CVC)"/>
+	
+	<!-- table 1 !-->	
+<table style="margin-top:200px; background:orange" cellspacing="10"; >	
+	<th style="background-color:orange">Enter Your Personnel Information Here</th>
+
+	<tr><td style="background-color:orange; font-size:18px;">First Name <input type = "text" name = "First_Name" size="30" /></td> 
+		<td style="background-color:orange; font-size:18px;">Last Name <input type = "text" name = "Last_Name" /></td>
+<td style="background-color:orange; font-size:18px;">Your Age <input type = "text" name = "Age" size="5" /></td> 
+ </tr>
+		
+<tr><td style="background-color:orange; font-size:18px;">E-mail <input type = "text" name = "Email" size="45" /></td> 
+			
+	<td style="background-color:orange; font-size:18px;">Phone Number <input type="text" name = "Phone_Number" /></td> 		
+	</tr>
+	
+
+<tr><td style="background-color:orange; font-size:18px;">Street Address <input type = "text" name = "Street_Address" size="50" /></td> 	
+
+<td style="background-color:orange; font-size:18px;"> City <input type = "text" name = "City" /></td> 	
+		
+<td style="background-color:orange; font-size:18px;">State <select name = "State">
+	     <option>Ala</option>
+		<option>Alaska</option>
+		<option>Ariz</option>
+		<option>Ark</option>
+		<option> Calif</option> 
+		<option>Colo</option>
+		<option>Conn</option>
+		<option>Del</option>
+		<option>D.C</option>
+		<option> Fla</option>
+		<option>Ga</option>
+		<option>Hawaii</option>
+		<option>Idaho</option>
+		<option>Ill</option>
+		<option> Ind</option> 
+		<option>Iowa</option>
+		<option>Kans</option>
+		<option>Ky</option>
+		<option>La </option>
+		<option> Maine</option>
+		<option>Md</option>
+		<option>Mass</option>
+		<option>Mich</option>
+		<option>Minn</option>
+		<option> Miss</option> 
+		<option>Mo</option>
+		<option>Mont</option>
+		<option>Nebr</option>
+		<option>Nev</option>
+		<option> N.H</option>
+		<option> N.J</option>
+		<option> N.Mex</option>
+		<option>N.Y</option>
+		<option>N.C</option>
+		<option> N.Dak</option> 
+		<option>Ohio</option>
+		<option>Okla</option>
+		<option>Oreg</option>
+		<option>Pa </option>
+		<option> R.I</option>
+		<option>S.C</option>
+		<option>S.Dak</option>
+		<option> Tenn</option> 
+		<option>Tex</option>
+		<option>Utah</option>
+		<option>Vt</option>
+		<option>Va </option>
+		<option> Wash</option>
+		<option>W.Va</option>
+		<option>Wisc </option>
+		<option> Wyo</option>
+	 	</select>
+</td> 
+<td style="background-color:orange; font-size:18px;"> Zipcode: <input type = "text" name = "Zipcode" /></td> </tr>
+</table>		
+	
+
+
+
+	
+<!--table 2 add buttons for hybrid electric, ...><!-->	
+
+<h2 style="margin-top:100px; color:white; text-align:center; background-color:red; width:100%">Please Enter the Information of the Vehicle You Want to Purchase Here</h2>
+	
+	<table  style="margin-top:40px; background-color:grey; color: white" cellspacing="15"; >
+		<tr><th style="font-size:20; margin-right:200px">  </th></tr>
+		
+		<tr><th>Vehicle Quality</th></tr>
+	<tr><tr> <td style="font-size:18px;"> NEW <input type = "radio" name = "Vehicle_Quality" value="NEW" /></td>
+		<td style="font-size:18px;">  USED <input type = "radio" name = "Vehicle_Quality" value="USED"/></td>
+	</tr>
+		
+		<tr> <td style="font-size:20px;"> Vehicle Make <input type = "text" name = "Vehicle_Make" size="30" /></td>
+		
+	<td style="font-size:20px;">Vehicle  model <input type = "text" name = "Vehicle_Model" size="30" /></td>
+
+	<td style="font-size:20px;">Vehicle Color<input type = "text" name = "Vehicle_Color" size="30" /></td>
+
+</tr>
+<tr> <th>Vehicle Type (All USED are REGULAR)</th></tr>
+	<tr> <td style="font-size:18px;"> Regular <input type = "radio" name = "Vehicle_Type" value="Regular"/></td>
+		
+		<td style="font-size:18px;"> Electric<input type = "radio" name = "Vehicle_Type" value="Electric" /></td>
+		
+		<td style="font-size:18px;">  Hybrid <input type = "radio" name = "Vehicle_Type" value="Hybrid" /></td>
+	</tr>
+	
+	</table>
+	
+	
+	
+	
+	
+	<!-- table 3 !-->	
+
+
+	
+<table  style="margin-top:40px; background-color:green; color: white" cellspacing="10"; >
+	<tr><th style="font-size:20"> Payment </th></tr>
+	
+	<tr> <td style="font-size:20px;">Card Name <input type = "text" name = "Card_Name" /></td>
+		
+<td style="font-size:20px;">Card Number <input type = "text" name = "Card_Number" size="40" /></td>
+
+<td style="font-size:20px;">Expiration Month <input type = "text" name = "Expiration_Month" size="10" /></td>
+
+<td style="font-size:20px;">Expiration Year <input type = "text" name = "Expiration_Year" size="15"/></td>
+
+<td style="font-size:20px;">CVC <input type = "text" name = "CVC" size="5"/></td></tr>
+
+<tr><td> <input type = "submit" value = "Click Here to Submit" size="40" /></td></tr>
+</table>
+</form>
+
+	<div id="bottomdiv" style="background-color:darkgrey">
+		<a href="aboutus.html" data-id="1" margin-left="0px"> About</a> &nbsp &nbsp
+		<a href="tel:347-221-9814" data-id="2"> 347-221-9814</a> &nbsp &nbsp
+		<a href="https://www.google.com/maps/place/Pier+40+at+Hudson+River+Park/@40.7292334,-74.0138527,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259f207efd1f5:0x6744bbded1006a3!8m2!3d40.7292334!4d-74.011664" data-id="3"> Location</a></div>
+</body>
+</html>

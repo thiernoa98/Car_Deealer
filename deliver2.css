@@ -1,0 +1,81 @@
+.background-wrap
+{
+	position:fixed;
+	z-index:-1000;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	top:0;
+	left:0;
+}
+#video-bg-element
+{
+	position:absolute;
+	top:0;
+	left:0;
+	min-height:100%;
+	min-width:100%;
+}
+.content h1
+{
+	text-align:center;
+	
+	font-size:30px;
+	text-transform:uppercase;
+	font-weight:250;
+	color:black;
+	padding:0%;
+
+	margin-top:100px;
+	background-color:orange;
+	background-width:100%;
+	
+}
+.content h2
+{
+	
+	margin-left:200px;
+	font-size:20px;
+	text-transform:lowercase;
+	font-weight:250;
+	color:black;
+	padding:0%;
+	margin-left:400px;
+	text-align:center;
+	background-color:orange;
+	background-width:100%;
+	width:450px;
+}
+div#topdiv
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:62px;
+	length:0px;
+	padding:8p8;
+}
+
+div#bottomdiv
+{
+
+	bottom:0px;
+
+	width:100%;
+	length:0px;
+
+	padding:8px;
+	text-align:right;
+	color:white;
+}
+mark 
+{ 
+	position:fixed;
+	background-color: ;
+	color: black;
+	top:0px;
+	right:10px;
+	height:18px;
+
+}
